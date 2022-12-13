@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css" type="text/css">
+    <script src="./js/jquery.js"></script>
+    <title>Prepara pedido</title>
+</head>
+<body>
+    <img class="inline_block" style="height: 80px;" src="images/pizzaimg.png" alt="logo_pizza">
+    <h1 class="inline_block">Pizzas FullStack</h1>
+    
+    <form id="formPedido" method="post" action="http://localhost:5000/pizza">
+        <div class="bg_cliente">
+            <h2>Datos del cliente</h2>
+            <div>
+                <label  id="labelNombre" for="nombreCliente">Nombre</label>
+                <input  type="text" name="nombreCliente" id="nombreCliente">
+            </div>
+            
+            <div>
+                <label id="labelApellido" for="apellidoCliente">Apellido</label>
+                <input type="text" name="apellidoCliente" id="apellidoCliente">
+            </div>
+
+            <div>
+                <label  for="fechaNacimiento">Fecha de Nacimiento</label>
+                <input type="date" name="fechaNacimiento" id="fechaNacimiento">
+            </div>
+
+            
+            <div>
+                <label for="numeroTelefono">Telefono</label>
+                <input type="number" name="numeroTelefono" id="numeroTelefono">
+            </div>
+            
+            <div>
+                <label for="codigo">Código Postal</label>
+                <textarea name="codigo" id="codigo"></textarea>
+            </div>
+        </div>
+        <div class="bg_pedido">
+            <h2>Datos del pedido</h2>
+            <div>
+                <label for="size">Tamaño</label>
+                <select name="size" id="size">
+                    <option id="peque">Pequeña</option>
+                    <option id="mediana">Mediana</option>
+                    <option id="grande">Grande</option>
+                </select>
+            </div>
+            <div>
+                <h4>Ingredientes</h4>
+                <div>
+                    <label for="jamon">Jamón York</label>
+                    <input type="checkbox" id="jamon" value="jamon" name="jamon">
+                </div>
+                <div>
+                    <label for="champi">Champiñones</label>
+                    <input type="checkbox" id="champi" value="champi" name="champi">
+                </div>
+                <div>
+                    <label for="pepperoni">Pepperoni</label>
+                    <input type="checkbox" id="pepperoni" value="pepperoni" name="pepperoni">
+                </div>
+                <div>
+                    <label for="aceitunas">Aceitunas</label>
+                    <input type="checkbox" id="aceitunas" value="aceitunas" name="aceitunas">
+                </div>
+        </div>
+            <div>
+                <button type="submit">Realizar pedido</button>
+                <button type="reset">Limpiar</button>
+            </div>
+
+        </div>
+
+    </form>
+    <script src="./js/script.js"></script>
+</body>
+</html>
