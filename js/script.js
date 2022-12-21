@@ -13,3 +13,22 @@ $("#formPedido").on("submit", function (event){
     }
 
 });
+
+$("#size").on("change", function (){
+    var size = this.value
+    $.ajax({
+        type: 'POST',
+        url: 'http://localhost:5000/checksize',
+        data:{
+            size
+        },
+        success:(response) => {
+            if (response == "No disponible"){
+                color = "red"
+            }else {
+                color = "green"
+            }
+            $("#resultado_tamano").text(response).css("color", color)
+        }
+    })
+})
